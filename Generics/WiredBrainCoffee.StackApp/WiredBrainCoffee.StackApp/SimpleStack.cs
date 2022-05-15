@@ -1,13 +1,13 @@
-﻿public class SimpleStack
+﻿public class SimpleStack<T>
 {
-    public readonly double[] _items;
+    public readonly T[] _items;
     public SimpleStack()
     {
-        _items = new double[10];
+        _items = new T[10];
     }
-    public int curentIndex = -1;
-    public int count => curentIndex +1;
-    public void Push(double item) => _items[++curentIndex] = item;
-    public double Pop() => _items[curentIndex--];
+    public int counter = -1;
+    public int count => counter +1;
+    public void Push(T item) => _items[++counter] = item;
+    public T Pop() => _items[counter--];
 
 }
